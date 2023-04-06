@@ -1,0 +1,14 @@
+services:
+
+  operate: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#operate
+    image: camunda/operate:${CAMUNDA_PLATFORM_VERSION:-8.2.0-alpha5}
+    container_name: operate
+    ports:
+      - "8081:8080"
+    environment: # https://docs.camunda.io/docs/self-managed/operate-deployment/configuration/
+      - CAMUNDA_OPERATE_ZEEBE_GATEWAYADDRESS=64.227.148.22:26500
+      - CAMUNDA_OPERATE_ELASTICSEARCH_URL=http://64.227.148.22:9200
+      - CAMUNDA_OPERATE_ZEEBEELASTICSEARCH_URL=http://64.227.148.22:9200
+
+# networks:
+#   camunda-platform:
