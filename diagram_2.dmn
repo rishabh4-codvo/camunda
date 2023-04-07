@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_1o0iia5" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="camera_decision_poc2_4" name="C&#38;E Matrix for Process CCTV position-p404">
+    <informationRequirement id="InformationRequirement_0nq9nlc">
+      <requiredInput href="#InputData_0fikqmg" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0p2lykr">
+      <requiredInput href="#InputData_1fvjh5x" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_105fup2" hitPolicy="FIRST">
+      <input id="Input_1" label="Tag No.">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>tag_no</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0gclfxw" label="Sense">
+        <inputExpression id="LiteralExpression_0aodap7" typeRef="boolean">
+          <text>sense</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="P055BZOR-33-71-1-P401" name="camera_position" typeRef="string" />
+      <rule id="DecisionRule_11z1fma">
+        <description>Sulfur Absorbers, 33-R-0402A</description>
+        <inputEntry id="UnaryTests_0ez7wke">
+          <text>"33-AFT-04101"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_076req3">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11xk8hl">
+          <text>"33-TCAP-000004 Pos 2"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0awtd87">
+        <description>Sulfur Absorbers, 33-R-0402A</description>
+        <inputEntry id="UnaryTests_1qtm5di">
+          <text>"33-AFT-04102"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fjw6az">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jm5xoo">
+          <text>"33-TCAP-000004 Pos 2"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wgo3xh">
+        <description>Sulfur Absorbers, 33-R-0402A</description>
+        <inputEntry id="UnaryTests_0tgnqqc">
+          <text>"33-AFT-04105"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pdusvu">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i7rol8">
+          <text>"33-TCAP-000004 Pos 2"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ezoax4">
+        <description>Hydrogenator – 33-R-0401</description>
+        <inputEntry id="UnaryTests_03r6afy">
+          <text>"33-AFT-04106"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09a19wu">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_004u5l0">
+          <text>"33-TCAP-000004 Pos 1"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xhlyfj">
+        <description>Sulfur Absorbers, 33-R-0402B</description>
+        <inputEntry id="UnaryTests_1isfxwp">
+          <text>"33-AFT-04131"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mnu2wq">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xo4c92">
+          <text>"33-TCAP-000004 Pos 3"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tncidh">
+        <description>Hydrogenator – 33-R-0401</description>
+        <inputEntry id="UnaryTests_1nfmp0w">
+          <text>"33-AFT-04132"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ypctrk">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r4ggsl">
+          <text>"33-TCAP-000004 Pos 1"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p5c3ig">
+        <inputEntry id="UnaryTests_095g41j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19bamdb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rkwoww">
+          <text>"none"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_0fikqmg" name="sense" />
+  <inputData id="InputData_1fvjh5x" name="tag_no" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="camera_decision_poc2_4">
+        <dc:Bounds height="80" width="180" x="270" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_08yuj21" dmnElementRef="InputData_0fikqmg">
+        <dc:Bounds height="45" width="125" x="158" y="328" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0rvzkoh" dmnElementRef="InputData_1fvjh5x">
+        <dc:Bounds height="45" width="125" x="438" y="329" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1vga35r" dmnElementRef="InformationRequirement_0nq9nlc">
+        <di:waypoint x="221" y="328" />
+        <di:waypoint x="330" y="200" />
+        <di:waypoint x="330" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_181mz17" dmnElementRef="InformationRequirement_0p2lykr">
+        <di:waypoint x="501" y="329" />
+        <di:waypoint x="390" y="200" />
+        <di:waypoint x="390" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
